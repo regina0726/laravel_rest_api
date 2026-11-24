@@ -8,13 +8,14 @@ http:
   url: http://localhost:8000/api/counties
   body:
     type: json
-    data: '{ "name": "Pest" }'
+    data: '{ "name": "Baranya" }'
   auth:
     type: bearer
-    token: '{{token}}'
+    token: "{{token}}"
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

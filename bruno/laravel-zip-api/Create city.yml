@@ -11,10 +11,16 @@ http:
     data: '{ "name": "Vác", "county_id": 1 }'
   auth:
     type: bearer
-    token: '{{token}}'
+    token: "{{token}}"
+
+runtime:
+  variables:
+    - name: url
+      value: http://localhost:8000/api
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
